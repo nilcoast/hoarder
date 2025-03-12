@@ -71,10 +71,10 @@ function prepareYtDlpArguments(url: string, assetPath: string) {
     );
   }
 
-  ytDlpArguments.push(...serverConfig.crawler.ytDlpArguments.split(','))
+  ytDlpArguments.push(...serverConfig.crawler.ytDlpArguments.split(","));
   ytDlpArguments.push("-o", assetPath);
   ytDlpArguments.push("--no-playlist");
-  return ytDlpArguments;
+  return ytDlpArguments.filter((e) => e); // remove empty options
 }
 
 async function runWorker(job: DequeuedJob<ZVideoRequest>) {
