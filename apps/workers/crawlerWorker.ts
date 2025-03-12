@@ -65,14 +65,14 @@ import { BookmarkTypes } from "@hoarder/shared/types/bookmarks";
 const metascraperParser = metascraper([
   metascraperAmazon(),
   metascraperReadability(),
+  metascraperAuthor(),
+  metascraperPublisher(),
   metascraperTitle(),
   metascraperDescription(),
   metascraperTwitter(),
   metascraperImage(),
   metascraperLogo(),
   metascraperUrl(),
-  metascraperAuthor(),
-  metascraperPublisher(),
 ]);
 
 let globalBrowser: Browser | undefined;
