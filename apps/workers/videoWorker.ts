@@ -71,9 +71,9 @@ function prepareYtDlpArguments(url: string, assetPath: string) {
     );
   }
 
-  ytDlpArguments.push(...serverConfig.crawler.ytDlpArguments.split(","));
   ytDlpArguments.push("-o", assetPath);
   ytDlpArguments.push("--no-playlist");
+  ytDlpArguments.push(...serverConfig.crawler.ytDlpArguments.split(","));
   return ytDlpArguments.filter((e) => e); // remove empty options
 }
 

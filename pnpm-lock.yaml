@@ -774,7 +774,7 @@ importers:
         specifier: ^5.45.22
         version: 5.45.22
       metascraper-author:
-        specifier: ^5.46.5
+        specifier: 5.46.5
         version: 5.46.5
       metascraper-description:
         specifier: ^5.45.22
@@ -789,8 +789,8 @@ importers:
         specifier: ^5.45.22
         version: 5.45.24
       metascraper-publisher:
-        specifier: ^5.46.5
-        version: 5.46.5
+        specifier: 5.45.22
+        version: 5.45.22
       metascraper-readability:
         specifier: ^5.45.22
         version: 5.45.22
@@ -9681,8 +9681,8 @@ packages:
     resolution: {integrity: sha512-5jydNOnEWUhgcCE/OFMLL2qHcYINvY/GSQ4uIYbunLbgApozpDg5kR8S65itQU28O20PnjJJ4RZKfHu7g+CNSA==}
     engines: {node: '>= 16'}
 
-  metascraper-publisher@5.46.5:
-    resolution: {integrity: sha512-vmc6tMshN/0n9DrMlOBt1jxktNIAqLJTP28Z2HStOadlNg4m6L+hdmp0mFAjfTxCuzR3bJYmWRfba4b51ugIiA==}
+  metascraper-publisher@5.45.22:
+    resolution: {integrity: sha512-R/Z0lUPZMDhL/pJ6LTtFR95rBtI9rvF7UtiCpbRbQbVv5ylqvv5wwOiyNYGWRmO7bfzCzlt248bmdpk6CxlASw==}
     engines: {node: '>= 16'}
 
   metascraper-readability@5.45.22:
@@ -17571,7 +17571,7 @@ snapshots:
       agent-base: 7.1.0
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.5
-      lru-cache: 10.2.0
+      lru-cache: 10.4.3
       socks-proxy-agent: 8.0.2
     transitivePeerDependencies:
       - supports-color
@@ -25795,7 +25795,7 @@ snapshots:
       - utf-8-validate
     dev: false
 
-  metascraper-publisher@5.46.5:
+  metascraper-publisher@5.45.22:
     dependencies:
       '@metascraper/helpers': 5.46.5
     transitivePeerDependencies:
@@ -27196,7 +27196,7 @@ snapshots:
       debug: 4.4.0
       get-uri: 6.0.3
       http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.4
+      https-proxy-agent: 7.0.5
       pac-resolver: 7.0.1
       socks-proxy-agent: 8.0.2
     transitivePeerDependencies:
