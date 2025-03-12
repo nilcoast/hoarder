@@ -111,6 +111,8 @@ export const bookmarks = sqliteTable(
     createdAt: createdAtField(),
     modifiedAt: modifiedAtField(),
     title: text("title"),
+    author: text("author"),
+    publisher: text("publisher"),
     archived: integer("archived", { mode: "boolean" }).notNull().default(false),
     favourited: integer("favourited", { mode: "boolean" })
       .notNull()
@@ -148,6 +150,8 @@ export const bookmarkLinks = sqliteTable(
     // Crawled info
     title: text("title"),
     description: text("description"),
+    author: text("author"),
+    publisher: text("publisher"),
     imageUrl: text("imageUrl"),
     favicon: text("favicon"),
     content: text("content"),

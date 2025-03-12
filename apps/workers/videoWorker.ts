@@ -71,7 +71,7 @@ function prepareYtDlpArguments(url: string, assetPath: string) {
     );
   }
 
-  ytDlpArguments.push(...serverConfig.crawler.ytDlpArguments.split(','))
+  ytDlpArguments.push(...serverConfig.crawler.ytDlpArguments.split(','));
   ytDlpArguments.push("-o", assetPath);
   ytDlpArguments.push("--no-playlist");
   return ytDlpArguments;

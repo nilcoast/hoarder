@@ -14,9 +14,11 @@ import { JSDOM } from "jsdom";
 import { DequeuedJob, Runner } from "liteque";
 import metascraper from "metascraper";
 import metascraperAmazon from "metascraper-amazon";
+import metascraperAuthor from "metascraper-author";
 import metascraperDescription from "metascraper-description";
 import metascraperImage from "metascraper-image";
 import metascraperLogo from "metascraper-logo-favicon";
+import metascraperPublisher from "metascraper-publisher";
 import metascraperReadability from "metascraper-readability";
 import metascraperTitle from "metascraper-title";
 import metascraperTwitter from "metascraper-twitter";
@@ -69,6 +71,8 @@ const metascraperParser = metascraper([
   metascraperImage(),
   metascraperLogo(),
   metascraperUrl(),
+  metascraperAuthor(),
+  metascraperPublisher(),
 ]);
 
 let globalBrowser: Browser | undefined;
@@ -677,6 +681,8 @@ async function crawlAndParseUrl(
         htmlContent: readableContent?.content,
         crawledAt: new Date(),
         crawlStatusCode: statusCode,
+        author: meta.author,
+        publisher: meta.publisher,
       })
       .where(eq(bookmarkLinks.id, bookmarkId));
 
