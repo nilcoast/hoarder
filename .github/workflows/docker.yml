@@ -46,7 +46,7 @@ jobs:
           build-args: SERVER_VERSION=nightly
           file: docker/Dockerfile
           target: ${{ matrix.target }}
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           tags: ghcr.io/nilcoast/${{ matrix.package }}:latest
           cache-from: type=registry,ref=ghcr.io/nilcoast/hoarder-build-cache:${{ matrix.target }}
@@ -60,7 +60,7 @@ jobs:
           build-args: SERVER_VERSION=${{ github.event.release.name }}
           file: docker/Dockerfile
           target: ${{ matrix.target }}
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           tags: ghcr.io/nilcoast/${{ matrix.package }}:${{ github.event.release.name }},ghcr.io/nilcoast/${{ matrix.package }}:release
           cache-from: type=registry,ref=ghcr.io/nilcoast/hoarder-build-cache:${{ matrix.target }}
